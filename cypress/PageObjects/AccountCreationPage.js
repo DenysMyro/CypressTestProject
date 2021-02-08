@@ -6,10 +6,10 @@ export class AccountCreationPage {
     getEmailInput() {
         return cy.get('#email')
     }
-    getAddressFristNameInptut() {
+    getAddressFristNameInput() {
         return cy.get('#firstname')
     }
-    getAddressLastNameInptut() {
+    getAddressLastNameInput() {
         return cy.get('#lastname')
     }
     getSubmitAccountBtn() {

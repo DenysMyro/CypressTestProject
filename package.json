@@ -12,5 +12,8 @@
   "license": "ISC",
   "devDependencies": {
     "cypress": "^6.4.0"
+  },
+  "dependencies": {
+    "nanoid": "^3.1.20"
   }
 }

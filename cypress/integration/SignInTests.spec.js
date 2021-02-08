@@ -13,7 +13,7 @@ let currentUser //placeholder for currently loaded Fixture User data
 
 describe('Login Tests with Fixtures Data', () => {
 
-    beforeEach(function () {
+    before(function () {
         cy.fixture('LoginValidUser').then((user) => {
             currentUser = user;
         })

@@ -23,7 +23,7 @@ describe('Registration Tests with Fixtures Data', () => {
         })
     })
 
-    it('User Registration flow', () => {
+    it('User should be able to pass Registration flow', () => {
 
         /**Given user opens Authorization page 
          * When user types valid, unused Email to #email_create input
@@ -46,8 +46,8 @@ describe('Registration Tests with Fixtures Data', () => {
 
         userCreationPage.fillUserData(currentUser)
 
-        userCreationPage.getAddressFristNameInptut().should('have.value', currentUser.firstName)
-        userCreationPage.getAddressLastNameInptut().should('have.value', currentUser.lastName)
+        userCreationPage.getAddressFristNameInput().should('have.value', currentUser.firstName)
+        userCreationPage.getAddressLastNameInput().should('have.value', currentUser.lastName)
 
         userCreationPage.getSubmitAccountBtn().click()
 
