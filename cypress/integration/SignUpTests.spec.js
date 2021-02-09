@@ -40,20 +40,20 @@ describe('Registration Tests with Fixtures Data', () => {
 
         authPage.submitRegistration(uuidStr + '+' + currentUser.email)
 
-        cy.url({timeout: 10000}).should('include', userCreationPage.getURLtext())
+        cy.url({timeout: 10000}).should('include', userCreationPage.GET_URL_TEXT())
 
-        userCreationPage.getEmailInput().should('have.value', uuidStr + '+' + currentUser.email)
+        userCreationPage.GET_EMAIL_INPUT().should('have.value', uuidStr + '+' + currentUser.email)
 
         userCreationPage.fillUserData(currentUser)
 
-        userCreationPage.getAddressFristNameInput().should('have.value', currentUser.firstName)
-        userCreationPage.getAddressLastNameInput().should('have.value', currentUser.lastName)
+        userCreationPage.GET_ADDRESS_FIRST_NAME_INPUT().should('have.value', currentUser.firstName)
+        userCreationPage.GET_ADDRESS_LAST_NAME_INPUT().should('have.value', currentUser.lastName)
 
-        userCreationPage.getSubmitAccountBtn().click()
+        userCreationPage.GET_SUBMIT_ACCOUNT_BTN().click()
 
-        cy.url({timeout: 10000}).should('include', myAccPage.getURLtext())
-        header.getLogOutBtn().should('exist')
-        header.getProfileName().should('contain', currentUser.firstName+' '+currentUser.lastName)
+        cy.url({timeout: 10000}).should('include', myAccPage.GET_URL_TEXT())
+        header.GET_LOGOUT_BTN().should('exist')
+        header.GET_PROFILE_NAME().should('contain', currentUser.firstName+' '+currentUser.lastName)
     })
 })
 

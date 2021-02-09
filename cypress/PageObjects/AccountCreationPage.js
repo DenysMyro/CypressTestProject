@@ -1,18 +1,18 @@
 export class AccountCreationPage {
     //Locators
-    getURLtext() {
+    GET_URL_TEXT() {
         return '#account-creation'
     }
-    getEmailInput() {
+    GET_EMAIL_INPUT() {
         return cy.get('#email')
     }
-    getAddressFristNameInput() {
+    GET_ADDRESS_FIRST_NAME_INPUT() {
         return cy.get('#firstname')
     }
-    getAddressLastNameInput() {
+    GET_ADDRESS_LAST_NAME_INPUT() {
         return cy.get('#lastname')
     }
-    getSubmitAccountBtn() {
+    GET_SUBMIT_ACCOUNT_BTN() {
         return cy.get('#submitAccount > span')
     }
 

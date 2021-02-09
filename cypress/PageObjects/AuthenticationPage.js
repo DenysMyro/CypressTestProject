@@ -3,25 +3,22 @@ import { nanoid } from "nanoid";
 export class AuthenticationPage {
 
     //Locators 
-    getURLtext() {
+    GET_URL_TEXT() {
         return 'controller=authentication&back=my-account'
     }
-    getLoginEmailInput() {
+    GET_LOGIN_EMAIL_INPUT() {
         return cy.get('#email');
     }
-    getLoginPasswordInput() {
+    GET_LOGIN_PASSWORD_INPUT() {
         return cy.get('#passwd');
     }
-    getForgotPasswordLink() {
-        return cy.get('.lost_password > a');
-    }
-    getLoginSubmitBtn() {
+    GET_LOGIN_SUBMIT_BTN() {
         return cy.get('#SubmitLogin > span');
     }
-    getRegistrationEmailInput() {
+    GET_REGISTRATION_EMAIL_INPUT() {
         return cy.get('#email_create');
     }
-    getRegistrationSumbitBtn() {
+    GET_REGISTRATION_SUBMIT_BTN() {
         return cy.get('#SubmitCreate > span');
     }
 

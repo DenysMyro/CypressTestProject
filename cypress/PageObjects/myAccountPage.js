@@ -1,7 +1,7 @@
 export class myAccountPage {
 
     //Locators
-    getURLtext() {
+    GET_URL_TEXT() {
         return '?controller=my-account'
     }
 

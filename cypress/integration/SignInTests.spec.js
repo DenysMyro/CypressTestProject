@@ -31,9 +31,9 @@ describe('Login Tests with Fixtures Data', () => {
 
         authPage.visit()
         authPage.submitLogIn(currentUser.email, currentUser.password)
-        cy.url().should('include', myAccPage.getURLtext())
-        header.getLogOutBtn().should('exist')
-        header.getProfileName().should('contain', currentUser.firstName+' '+currentUser.lastName)
+        cy.url().should('include', myAccPage.GET_URL_TEXT())
+        header.GET_LOGOUT_BTN().should('exist')
+        header.GET_PROFILE_NAME().should('contain', currentUser.firstName+' '+currentUser.lastName)
     })
     it('User should be able to Log out', () => {
 
@@ -44,8 +44,8 @@ describe('Login Tests with Fixtures Data', () => {
          * And Authentication page should be opened
          */
 
-        header.getLogOutBtn().should('exist').click()
-        header.getLogInBtn().should('exist')
-        cy.url().should('include', authPage.getURLtext())
+        header.GET_LOGOUT_BTN().should('exist').click()
+        header.GET_LOGIN_BTN().should('exist')
+        cy.url().should('include', authPage.GET_URL_TEXT())
     })
 })
