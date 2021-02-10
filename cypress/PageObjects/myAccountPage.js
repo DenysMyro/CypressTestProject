@@ -1,12 +1,13 @@
 export class myAccountPage {
+    URL_TEXT = '?controller=my-account'
 
     //Locators
     GET_URL_TEXT() {
-        return '?controller=my-account'
+        return this.URL_TEXT
     }
 
     //Actions
     visit() {
-        cy.visit('?controller=my-account')
+        cy.visit(this.URL_TEXT)
     }
 }
