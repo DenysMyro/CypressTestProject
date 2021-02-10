@@ -4,11 +4,13 @@ import { AuthenticationPage } from "../PageObjects/AuthenticationPage";
 import { myAccountPage } from "../PageObjects/myAccountPage";
 import { PageHeader } from "../PageObjects/PageHeader";
 import { AccountCreationPage } from "../PageObjects/AccountCreationPage";
+import { Utils } from "../Utils/Utils";
 
 const authPage = new AuthenticationPage()
 const header = new PageHeader()
 const myAccPage = new myAccountPage()
 const userCreationPage = new AccountCreationPage()
+const utils = new Utils()
 
 let currentUser //placeholder for user data set in Before
 let uuidStr // placeholder for unique identificator for user registration 
@@ -19,7 +21,7 @@ describe('Registration Tests with Fixtures Data', () => {
         cy.fixture('UserRegistrationData').then((user) => {
             let count = Math.floor(Math.random() * Math.floor(user.length));
             currentUser = user[count]; //get random user from UserRegistrationData.json
-            uuidStr = authPage.getRandomString() // get unique identificator for user registration 
+            uuidStr = utils.getRandomUUIDString() // get unique identificator for user registration
         })
     })
 

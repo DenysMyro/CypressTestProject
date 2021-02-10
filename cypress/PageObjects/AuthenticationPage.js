@@ -44,7 +44,4 @@ export class AuthenticationPage {
             
         cy.get('#SubmitCreate > span').click()
     }
-    getRandomString() {
-        return nanoid(10)
-    }
 }
