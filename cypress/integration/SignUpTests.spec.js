@@ -42,7 +42,7 @@ describe('Registration Tests with Fixtures Data', () => {
 
         authPage.submitRegistration(uuidStr + '+' + currentUser.email)
 
-        cy.url({ timeout: 10000 }).should('include', userCreationPage.GET_URL_TEXT())
+        cy.url().should('include', userCreationPage.GET_URL_TEXT())
 
         userCreationPage.GET_EMAIL_INPUT().should('have.value', uuidStr + '+' + currentUser.email)
 
@@ -53,7 +53,7 @@ describe('Registration Tests with Fixtures Data', () => {
 
         userCreationPage.GET_SUBMIT_ACCOUNT_BTN().click()
 
-        cy.url({ timeout: 10000 }).should('include', myAccPage.GET_URL_TEXT())
+        cy.url().should('include', myAccPage.GET_URL_TEXT())
         header.GET_LOGOUT_BTN().should('exist')
         header.GET_PROFILE_NAME().should('contain', currentUser.firstName + ' ' + currentUser.lastName)
     })

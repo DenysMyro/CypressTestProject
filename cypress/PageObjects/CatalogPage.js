@@ -7,25 +7,24 @@ export class CatalogPage {
     TshirtsCategoryURLtext = "id_category=5&controller=category"
     TshirtsCategoryTitle = "T-shirts"
 
-    GET_WOMEN_URL_TEXT(){
+    GET_WOMEN_URL_TEXT() {
         return this.WomenCategoryURLtext;
     }
-    GET_WOMEN_PAGE_TITLE(){
+    GET_WOMEN_PAGE_TITLE() {
         return this.WomanCategoryTitle;
     }
-    GET_DRESSES_URL_TEXT(){
+    GET_DRESSES_URL_TEXT() {
         return this.DressesCategoryURLtext;
     }
-    GET_DRESSES_PAGE_TITLE(){
+    GET_DRESSES_PAGE_TITLE() {
         return this.DressesCategoryTitle;
     }
-    GET_TSHIRTS_URL_TEXT(){
+    GET_TSHIRTS_URL_TEXT() {
         return this.TshirtsCategoryURLtext;
     }
-    GET_TSHIRTS_PAGE_TITLE(){
+    GET_TSHIRTS_PAGE_TITLE() {
         return this.TshirtsCategoryTitle;
     }
-
     GET_BREADCRUMB() {
         return cy.get('.breadcrumb')
     }
@@ -38,17 +37,36 @@ export class CatalogPage {
     GET_FILTERS_BLOCK() {
         return cy.get('#layered_block_left')
     }
-    GET_PAGE_HEADING_NAME(){
+    GET_PAGE_HEADING_NAME() {
         return cy.get('.cat-name')
     }
-    GET_PRODUCT_LIST(){
+    GET_PRODUCT_LIST() {
         return cy.get('.product_list')
     }
 
     //Actions
-
-    GetRandomCategoryLink(){
-        let links = ['Apple', 'Banana']
+    VisitCategory(categoryID) {
+        cy.visit('/index.php?id_category=' + categoryID + '&controller=category')
     }
-
+    SelectSize(size) {
+        //checks selected size on catalog page
+        switch (size) {
+            case 'S':
+                cy.get('#layered_id_attribute_group_1').check()
+                break;
+            case 'M':
+                cy.get('#layered_id_attribute_group_2').check()
+                break;
+            case 'L':
+                cy.get('#layered_id_attribute_group_3').check()
+                break;
+            default:
+                cy.log(size + ' size is not available')
+        }
+    }
+    AddItemToCart(ItemName){
+        cy.contains(ItemName).focus()
+        cy.contains('Add to cart').click()
+    }
 }
+
