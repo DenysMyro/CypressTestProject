@@ -1,14 +1,14 @@
 /// <reference types="cypress" />
 
 import { AuthenticationPage } from "../PageObjects/AuthenticationPage";
-import { myAccountPage } from "../PageObjects/myAccountPage";
+import { MyAccountPage } from "../PageObjects/MyAccountPage";
 import { PageHeader } from "../PageObjects/PageHeader";
 import { AccountCreationPage } from "../PageObjects/AccountCreationPage";
 import { Utils } from "../Utils/Utils";
 
 const authPage = new AuthenticationPage()
 const header = new PageHeader()
-const myAccPage = new myAccountPage()
+const myAccPage = new MyAccountPage()
 const userCreationPage = new AccountCreationPage()
 const utils = new Utils()
 

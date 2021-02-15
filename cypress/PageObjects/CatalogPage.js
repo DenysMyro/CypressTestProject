@@ -8,22 +8,22 @@ export class CatalogPage {
     TshirtsCategoryTitle = "T-shirts"
 
     GET_WOMEN_URL_TEXT() {
-        return this.WomenCategoryURLtext;
+        return this.WomenCategoryURLtext
     }
     GET_WOMEN_PAGE_TITLE() {
-        return this.WomanCategoryTitle;
+        return this.WomanCategoryTitle
     }
     GET_DRESSES_URL_TEXT() {
-        return this.DressesCategoryURLtext;
+        return this.DressesCategoryURLtext
     }
     GET_DRESSES_PAGE_TITLE() {
-        return this.DressesCategoryTitle;
+        return this.DressesCategoryTitle
     }
     GET_TSHIRTS_URL_TEXT() {
-        return this.TshirtsCategoryURLtext;
+        return this.TshirtsCategoryURLtext
     }
     GET_TSHIRTS_PAGE_TITLE() {
-        return this.TshirtsCategoryTitle;
+        return this.TshirtsCategoryTitle
     }
     GET_BREADCRUMB() {
         return cy.get('.breadcrumb')
@@ -45,10 +45,10 @@ export class CatalogPage {
     }
 
     //Actions
-    VisitCategory(categoryID) {
+    visitCategory(categoryID) {
         cy.visit('/index.php?id_category=' + categoryID + '&controller=category')
     }
-    SelectSize(size) {
+    selectSize(size) {
         //checks selected size on catalog page
         switch (size) {
             case 'S':
@@ -64,11 +64,11 @@ export class CatalogPage {
                 cy.log(size + ' size is not available')
         }
     }
-    AddItemToCart(ItemName) {
+    addItemToCart(ItemName) {
         cy.contains(ItemName).focus()
         cy.contains('Add to cart').click()
     }
-    SelectColor(color){
+    selectColor(color) {
         cy.contains(color).click()
     }
 }

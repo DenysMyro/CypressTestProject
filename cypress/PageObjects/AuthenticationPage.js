@@ -1,5 +1,3 @@
-import { nanoid } from "nanoid";
-
 export class AuthenticationPage {
 
     URL_TEXT = 'index.php?controller=authentication&back=my-account'
@@ -13,19 +11,19 @@ export class AuthenticationPage {
         return this.PAGE_TITLE
     }
     GET_LOGIN_EMAIL_INPUT() {
-        return cy.get('#email');
+        return cy.get('#email')
     }
     GET_LOGIN_PASSWORD_INPUT() {
-        return cy.get('#passwd');
+        return cy.get('#passwd')
     }
     GET_LOGIN_SUBMIT_BTN() {
-        return cy.get('#SubmitLogin > span');
+        return cy.get('#SubmitLogin > span')
     }
     GET_REGISTRATION_EMAIL_INPUT() {
-        return cy.get('#email_create');
+        return cy.get('#email_create')
     }
     GET_REGISTRATION_SUBMIT_BTN() {
-        return cy.get('#SubmitCreate > span');
+        return cy.get('#SubmitCreate > span')
     }
 
     //Actions

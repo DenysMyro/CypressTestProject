@@ -2,12 +2,12 @@
 
 
 import { AuthenticationPage } from "../PageObjects/AuthenticationPage";
-import { myAccountPage } from "../PageObjects/myAccountPage";
+import { MyAccountPage } from "../PageObjects/MyAccountPage";
 import { PageHeader } from "../PageObjects/PageHeader";
 
 const authPage = new AuthenticationPage()
 const header = new PageHeader()
-const myAccPage = new myAccountPage()
+const myAccPage = new MyAccountPage()
 
 let currentUser //placeholder for currently loaded Fixture User data
 
@@ -15,7 +15,7 @@ describe('Login Tests with Fixtures Data', () => {
 
     before(function () {
         cy.fixture('LoginValidUser').then((user) => {
-            currentUser = user;
+            currentUser = user
         })
     })
 

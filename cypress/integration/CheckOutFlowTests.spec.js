@@ -20,7 +20,7 @@ describe('End2End Check Our flow Tests', () => {
             CatalogItem = itemToPurchase[0];
         })
         cy.fixture('LoginValidUser').then((user) => {
-            currentUser = user;
+            currentUser = user
         })
     })
 
@@ -59,11 +59,11 @@ describe('End2End Check Our flow Tests', () => {
          * Then Orders History page of MY Account should be opened 
          */
 
-        catalog.VisitCategory(CatalogItem.CategoryID) // visiting T-shirts catalog 
+        catalog.visitCategory(CatalogItem.CategoryID) // visiting T-shirts catalog 
 
-        catalog.SelectSize(CatalogItem.Size)
+        catalog.selectSize(CatalogItem.Size)
 
-        catalog.AddItemToCart(CatalogItem.ItemName)
+        catalog.addItemToCart(CatalogItem.ItemName)
 
         successPopUp.GET_POP_UP_FRAME().should('be.visible')
 
@@ -217,11 +217,11 @@ describe('End2End Check Our flow Tests', () => {
 
         authPage.submitLogIn(currentUser.email, currentUser.password)
 
-        catalog.VisitCategory(CatalogItem.CategoryID) // visiting T-shirts catalog 
+        catalog.visitCategory(CatalogItem.CategoryID) // visiting T-shirts catalog 
 
-        catalog.SelectSize(CatalogItem.Size)
+        catalog.selectSize(CatalogItem.Size)
 
-        catalog.AddItemToCart(CatalogItem.ItemName)
+        catalog.addItemToCart(CatalogItem.ItemName)
 
         successPopUp.GET_POP_UP_FRAME().should('be.visible')
 

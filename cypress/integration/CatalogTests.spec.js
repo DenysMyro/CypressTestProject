@@ -30,7 +30,7 @@ describe('Catalog Tests', () => {
          * - Catalog Poster
         */
 
-        catalog.VisitCategory(categoryID)
+        catalog.visitCategory(categoryID)
 
         catalog.GET_BREADCRUMB()
             .should('exist')
@@ -56,7 +56,7 @@ describe('Catalog Tests', () => {
          * When user click on first menu item from Navigation menu in the Header
          * Then 'Women' catalog page shoudl be opened 
         */
-        catalog.VisitCategory(categoryID)
+        catalog.visitCategory(categoryID)
 
         header.GET_FIRST_MENU_ITEM()
             .should('have.text', catalog.GET_WOMEN_PAGE_TITLE())
@@ -78,7 +78,7 @@ describe('Catalog Tests', () => {
          * Then 'Dresses' catalog page should be opened 
         */
 
-        catalog.VisitCategory(categoryID)
+        catalog.visitCategory(categoryID)
 
         header.GET_SECOND_MENU_ITEM()
             .should('have.text', catalog.GET_DRESSES_PAGE_TITLE())
@@ -101,7 +101,7 @@ describe('Catalog Tests', () => {
          * Then 'T-Shirts' catalog page should be opened 
         */
 
-        catalog.VisitCategory(categoryID)
+        catalog.visitCategory(categoryID)
 
         header.GET_THIRD_MENU_ITEM()
             .should('have.text', catalog.GET_TSHIRTS_PAGE_TITLE())

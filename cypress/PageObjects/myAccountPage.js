@@ -1,4 +1,4 @@
-export class myAccountPage {
+export class MyAccountPage {
     URL_TEXT = '?controller=my-account'
 
     //Locators

@@ -40,10 +40,10 @@ export class CheckOutPage {
     GET_PAGE_SUBHEADING() {
         return cy.get('.page-subheading')
     }
-    GET_ORDER_COMPLETE_INDICATOR(){
+    GET_ORDER_COMPLETE_INDICATOR() {
         return cy.get('.cheque-indent > .dark')
     }
-    GET_CHEQUE_CHECKOUT_SUCCESES_ALERT(){
+    GET_CHEQUE_CHECKOUT_SUCCESES_ALERT() {
         return cy.get('.alert')
     }
 
