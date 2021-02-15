@@ -31,17 +31,17 @@ describe('End2End Check Our flow Tests', () => {
          * When user opens catalog page 
          * And click 'Add to cart' button of currently focused catalog item 
          * Then Selected Item should be added to the cart 
-         * And Pop Up 'Product successfully added to your shopping cart' should be shown with Addet item details
-         * When user clicks on the 'Proceed to checout' button from the 'successfully added' pop up
+         * And Pop Up 'Product successfully added to your shopping cart' should be shown with Added item details
+         * When user clicks on the 'Proceed to checkout' button from the 'successfully added' pop up
          * Then Check Out Page should be opened with the first step 'Card Summary'
          * And Card Summary Should include details about added goods
          * When user clicks on the 'Proceed' button 
-         * Then step 2 Authentification of the Check Out flow should be opened 
-         * And Sign in inputs should be avaialbe 
+         * Then step 2 Authentication of the Check Out flow should be opened 
+         * And Sign in inputs should be available 
          * When user submits valid credentials to the sing in form 
          * Then user should be authenticated 
          * And step 3 'Address Confirmation' of Check Out flow should be opened
-         * And User's address should mathing Billing and Delivery adderesses dispalayed on the page 
+         * And User's address should matching Billing and Delivery addresses displayed on the page 
          * When User clicks on the 'Proceed' button 
          * Then step 4 Shipping of the Check Out flow should be opened
          * And list of available shipping options should be displayed 
@@ -54,8 +54,8 @@ describe('End2End Check Our flow Tests', () => {
          * Then Bank wire Payment Details Should be opened 
          * When User clicks on the 'Proceed' button 
          * Then User's order Should be confirmed 
-         * And Order Confrimation page with 'Order complete' message should be opened 
-         * When user clicks on the 'Back to orders' button from Order Confrimation page
+         * And Order Confirmation page with 'Order complete' message should be opened 
+         * When user clicks on the 'Back to orders' button from Order Confirmation page
          * Then Orders History page of MY Account should be opened 
          */
 
@@ -188,14 +188,14 @@ describe('End2End Check Our flow Tests', () => {
          * When user opens catalog page 
          * And click 'Add to cart' button of currently focused catalog item 
          * Then Selected Item should be added to the cart 
-         * And Pop Up 'Product successfully added to your shopping cart' should be shown with Addet item details
-         * When user clicks on the 'Proceed to checout' button from the 'successfully added' pop up
+         * And Pop Up 'Product successfully added to your shopping cart' should be shown with Added item details
+         * When user clicks on the 'Proceed to checkout' button from the 'successfully added' pop up
          * Then Check Out Page should be opened with the first step 'Card Summary'
          * And Card Summary Should include details about added goods
          * When user clicks on the 'Proceed' button 
-         * Then step 2 Authentification of the Check Out flow should be skipped  
+         * Then step 2 Authentication of the Check Out flow should be skipped  
          * And step 3 'Address Confirmation' of Check Out flow should be opened instead
-         * And User's address should mathing Billing and Delivery adderesses dispalayed on the page 
+         * And User's address should matching Billing and Delivery addresses displayed on the page 
          * When User clicks on the 'Proceed' button 
          * Then step 4 Shipping of the Check Out flow should be opened
          * And list of available shipping options should be displayed 
@@ -208,8 +208,8 @@ describe('End2End Check Our flow Tests', () => {
          * Then Cheque Payment Details Should be opened 
          * When User clicks on the 'Proceed' button 
          * Then User's order Should be confirmed 
-         * And Order Confrimation page with 'Order complete' message should be opened 
-         * When user clicks on the 'Back to orders' button from Order Confrimation page
+         * And Order Confirmation page with 'Order complete' message should be opened 
+         * When user clicks on the 'Back to orders' button from Order Confirmation page
          * Then Orders History page of MY Account should be opened 
          */
 

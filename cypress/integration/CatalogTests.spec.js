@@ -54,7 +54,7 @@ describe('Catalog Tests', () => {
         /**
          * Given user is on any page with Header
          * When user click on first menu item from Navigation menu in the Header
-         * Then 'Women' catalog page shoudl be opened 
+         * Then 'Women' catalog page should be opened 
         */
         catalog.visitCategory(categoryID)
 
