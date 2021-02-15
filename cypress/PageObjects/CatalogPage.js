@@ -64,9 +64,12 @@ export class CatalogPage {
                 cy.log(size + ' size is not available')
         }
     }
-    AddItemToCart(ItemName){
+    AddItemToCart(ItemName) {
         cy.contains(ItemName).focus()
         cy.contains('Add to cart').click()
+    }
+    SelectColor(color){
+        cy.contains(color).click()
     }
 }
 

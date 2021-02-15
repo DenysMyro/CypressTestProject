@@ -16,5 +16,8 @@ export class ProductSuccessfullyAddedPopUp {
     GET_ADDED_PRODUCT_PRICE(){
         return cy.get('#layer_cart_product_price')
     }
+    GET_PRODUCT_ATTRIBUTES(){
+        return cy.get('#layer_cart_product_attributes')
+    }
      
 }

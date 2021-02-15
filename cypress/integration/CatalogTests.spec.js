@@ -14,7 +14,7 @@ describe('Catalog Tests', () => {
     beforeEach(function () {
         categoryID = utils.getRandomNumberFromRange(3, 11)
         cy.log('categoryID#' + categoryID)
-        //visit method is moved to tests body because if it visits 'unavailable' id_category=6 then execution stops
+        //Visit method is moved to test's body because if it Visits 'unavailable' id_category=6 then execution stops
     })
 
     it('User should see basic catalog Elements on any category page ', () => {
@@ -25,15 +25,14 @@ describe('Catalog Tests', () => {
          * Then Catalog page should be opened 
          * And loaded page should include: 
          * - Breadcrumbs Indicator 
-         * - Categories bolock 
          * - Filters block 
-         * - Page Header with catalog name 'Woman' 
          * - Products list 
+         * - Catalog Poster
         */
 
-        catalog.visitCategory(categoryID)
+        catalog.VisitCategory(categoryID)
 
-        catalog.GET_CATEGORIES_BLOCK()
+        catalog.GET_BREADCRUMB()
             .should('exist')
             .and('be.visible')
 
@@ -57,7 +56,7 @@ describe('Catalog Tests', () => {
          * When user click on first menu item from Navigation menu in the Header
          * Then 'Women' catalog page shoudl be opened 
         */
-        catalog.visitCategory(categoryID)
+        catalog.VisitCategory(categoryID)
 
         header.GET_FIRST_MENU_ITEM()
             .should('have.text', catalog.GET_WOMEN_PAGE_TITLE())
@@ -79,7 +78,7 @@ describe('Catalog Tests', () => {
          * Then 'Dresses' catalog page should be opened 
         */
 
-        catalog.visitCategory(categoryID)
+        catalog.VisitCategory(categoryID)
 
         header.GET_SECOND_MENU_ITEM()
             .should('have.text', catalog.GET_DRESSES_PAGE_TITLE())
@@ -93,7 +92,7 @@ describe('Catalog Tests', () => {
         catalog.GET_PAGE_HEADING_NAME().should('include.text', catalog.GET_DRESSES_PAGE_TITLE())
 
     })
-    
+
     it('User should open T-shirts catalog with second menu item in Header', () => {
 
         /**
@@ -102,7 +101,7 @@ describe('Catalog Tests', () => {
          * Then 'T-Shirts' catalog page should be opened 
         */
 
-        catalog.visitCategory(categoryID)
+        catalog.VisitCategory(categoryID)
 
         header.GET_THIRD_MENU_ITEM()
             .should('have.text', catalog.GET_TSHIRTS_PAGE_TITLE())

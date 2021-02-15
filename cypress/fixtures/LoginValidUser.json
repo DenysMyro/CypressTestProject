@@ -2,5 +2,13 @@
   "email": "denys.myroshnychenko+test1@gmail.com",
   "password": "Test1111",
   "firstName": "Denys",
-  "lastName": "Test"
+  "lastName": "Test",
+  "address1": "159 Main St",
+  "address2": "",
+  "city": "Taylor",
+  "state": "Texas",
+  "zip": "76574",
+  "country": "United States",
+  "phone": "0123456789"
+  
 }

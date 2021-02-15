@@ -2,9 +2,15 @@ import { nanoid } from "nanoid";
 
 export class AuthenticationPage {
 
+    URL_TEXT = 'index.php?controller=authentication&back=my-account'
+    PAGE_TITLE = 'Authentication'
+
     //Locators 
     GET_URL_TEXT() {
-        return 'controller=authentication&back=my-account'
+        return this.URL_TEXT
+    }
+    GET_PAGE_TITLE() {
+        return this.PAGE_TITLE
     }
     GET_LOGIN_EMAIL_INPUT() {
         return cy.get('#email');
@@ -24,7 +30,7 @@ export class AuthenticationPage {
 
     //Actions
     visit() {
-        cy.visit("/?controller=authentication&back=my-account");
+        cy.visit(this.URL_TEXT);
     }
     submitLogIn(email, password) {
         cy.get('#email')
