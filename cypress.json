@@ -1,5 +1,7 @@
 {
     "baseUrl": "http://automationpractice.com/",
     "modifyObstructiveCode": true, 
-    "experimentalSourceRewriting": true
+    "experimentalSourceRewriting": true,
+    "watchForFileChanges": false,
+    "defaultCommandTimeout": 10000
 }
